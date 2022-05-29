@@ -1,4 +1,4 @@
-.allCatsContainer{
+.favoriteCatsContainer{
     width: 100%;
     padding: 48px 62px;
     display: grid;
@@ -7,22 +7,22 @@
 }
 
 @media screen and (max-width: 1400px) {
-    .allCatsContainer{
+    .favoriteCatsContainer{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 @media screen and (max-width: 1180px) {
-    .allCatsContainer{
+    .favoriteCatsContainer{
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 @media screen and (max-width: 930px) {
-    .allCatsContainer{
+    .favoriteCatsContainer{
         grid-template-columns: 1fr 1fr;
     }
 }
 @media screen and (max-width: 700px) {
-    .allCatsContainer{
+    .favoriteCatsContainer{
         grid-template-columns: 1fr;
         justify-items: center;
     }

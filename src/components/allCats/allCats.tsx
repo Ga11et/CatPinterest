@@ -9,40 +9,36 @@ type AllCatsPropsType = {
     
 }
 export const AllCats: FC<AllCatsPropsType> = ({  }) => {
+    
+    const [cats, setCats] = useState<CatType[]>([])
+    const scroll = usePageScrollingPercent()
+    const favoriteCats = useAppSelector(state => state.FavouriteCatsReducer.cats)
 
-    const [cats, setCats] = useState<CatType[]>()
+    const startCats = catsAPI.useFetchAllCatsQuery(30)
     const [moreCats, {data}] = catsAPI.useFetchMoreCatsMutation()
-    const { isLoading } = useAppSelector(state => state.CatReducer)
-    // const scroll = usePageScrollingPercent()
+
 
     useEffect(() => {
-        handleMoreCats()
-    }, [])
-
-    const handleMoreCats = () => {
-        moreCats(15)
-        if (cats != undefined && data != undefined) {
-            setCats([...cats, ...data])
+        if  (scroll >= 95) {
+            moreCats(15)
+            if (cats != undefined && data != undefined) {
+                setCats([...cats, ...data])
+            }
         }
-    }
-
-    // useEffect(() => {
-    //     if  (scroll >= 95) {
-            
-    //     }
-    // }, [scroll])
+    }, [scroll])
 
     return <>
         <main className={css.allCatsContainer}>
-            {cats?.map(el => <Cat 
-                    isFavorite={false} 
-                    url={el.url}
+            {startCats.data?.map(el => <Cat 
+                    isFavorite={favoriteCats.includes(el)} 
+                    catContent={el}
                     key={el.id}
                 />)}
-            {isLoading ? <div>Loading</div> : <div>Loaded</div>}
-            <button
-                onClick={() => handleMoreCats()}
-            >Загрузить еще</button>
+            {cats?.map(el => <Cat 
+                    isFavorite={favoriteCats.includes(el)} 
+                    catContent={el}
+                    key={el.id}
+                />)}
         </main>
     </>
 }

@@ -1,10 +1,36 @@
 .cat{
-    width: 100%;
-    height: 100%;
+    width: 225px;
+    height: 225px;
+    background-color: rgba(128, 128, 128, 0.349);
+    position: relative;
 }
 .img{
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.favorite,
+.favoritefull{
+    position: absolute;
+    bottom: 24px;
+    right: 19px;
+    display: none;
+}
+.favorite:hover{
+    cursor: pointer;
+}
+.favorite:hover +
+.favoritefull{
+    display: block;
+}
+.favoritefull:hover{
+    display: block;
+    cursor: pointer;
+}
+.cat:hover .favorite{
+    display: block;
+}
+.favoritefull.show{
+    display: block;
 }
