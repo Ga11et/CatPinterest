@@ -1,0 +1,30 @@
+.header{
+    height: 64px;
+    background-color: var(--blue);
+}
+.nav{
+    display: flex;
+    padding: 0 62px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+.link{
+    height: 100%;
+    color: var(--whiteMedium);
+    text-decoration: none;
+    transition: 300ms;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.25px;padding: 23px 20px;
+}
+.link:hover{
+    background-color: var(--blueActive);
+    color: var(--white);
+    transition: 300ms;
+}
+.active{
+    background-color: var(--blueActive);
+    color: var(--white);
+}
