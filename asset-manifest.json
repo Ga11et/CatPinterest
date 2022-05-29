@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/CatPinterest/static/css/main.7dc48c87.css",
+    "main.js": "/CatPinterest/static/js/main.cc6a4ccc.js",
+    "static/js/787.2cc3a913.chunk.js": "/CatPinterest/static/js/787.2cc3a913.chunk.js",
+    "index.html": "/CatPinterest/index.html",
+    "static/media/favorite.svg": "/CatPinterest/static/media/favorite.6adfe85f8b98c6dc6b44df906a50f5eb.svg",
+    "static/media/favoriteFull.svg": "/CatPinterest/static/media/favoriteFull.8220379cb36244a7738b6600ebc04025.svg",
+    "main.7dc48c87.css.map": "/CatPinterest/static/css/main.7dc48c87.css.map",
+    "main.cc6a4ccc.js.map": "/CatPinterest/static/js/main.cc6a4ccc.js.map",
+    "787.2cc3a913.chunk.js.map": "/CatPinterest/static/js/787.2cc3a913.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7dc48c87.css",
+    "static/js/main.cc6a4ccc.js"
+  ]
+}
